@@ -15,6 +15,7 @@ export default function List() {
   return (
     <>
       <h2>List Toko</h2>
+      <a href="/toko/create">+ CREATE</a>
       <table>
         <thead>
           <tr>
@@ -22,6 +23,7 @@ export default function List() {
             <th>Nama</th>
             <th>Owner</th>
             <th>Alamat</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +36,9 @@ export default function List() {
                 </td>
                 <td>{t.owner}</td>
                 <td>{t.alamat}</td>
+                <td>
+                  <a href={`/toko/update/${t._id}`}>update</a>
+                </td>
               </tr>
             ))}
         </tbody>
