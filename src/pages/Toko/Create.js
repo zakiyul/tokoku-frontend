@@ -15,7 +15,10 @@ const Create = () => {
 
   const createToko = async () => {
     const response = await Axios.post(`http://localhost:3000/api/toko`, toko);
-    swal(response.statusText);
+    swal({
+      title: response.statusText,
+      icon: "success",
+    });
     setToko(initState);
   };
 

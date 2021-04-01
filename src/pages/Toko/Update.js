@@ -26,7 +26,11 @@ const Create = () => {
       `http://localhost:3000/api/toko/${tokoId}`,
       toko
     );
-    swal(data.message);
+
+    swal({
+      title: data.message,
+      icon: "success",
+    });
   };
 
   const handleChange = (e, name) => {
